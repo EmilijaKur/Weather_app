@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperWeather</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="basic.js" defer></script>
+  <script src="https://unpkg.com/frappe-charts@latest/dist/frappe-charts.min.umd.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>SuperWeather App</h1>
+      <div class="controls">
+        <select id="unitSelect">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+          <option value="K">Kelvin</option>
+        </select>
+        <button id="geoBtn">Use My Location</button>
+      </div>
+    </header>
+
+    <section id="searchSection">
+      <input id="searchInput" type="text" placeholder="Search location (e.g. Helsinki)" />
+      <button id="searchBtn">Search</button>
+      <button id="favAddBtn">Add Favorite</button>
+    </section>
+
+    <section id="infoSection">
+      <h2 id="locationLabel">No location selected</h2>
+      <div  id="status"></div>
+      <div id="currentWeather"></div>
+      <div class="forecast-box" id="hourlyForecast"></div>
+      <div class="forecast-box" id="dailyForecast"></div>
+      <div class="forecast-box" > <strong>24-hour Temperature Comparison</strong> <div id="comparisonChart"></div></div>
+    </section>
+
+    <aside id="favorites">
+      <h3>Favorites</h3>
+      <ul id="favList"></ul>
+    </aside>
+
+    <footer>
+      <small>Sources: Open-Meteo (no key), 7Timer! (no key), OpenWeatherMap<br>
+    </footer>
+  </div>
+
+  
+</body>
+</html>
